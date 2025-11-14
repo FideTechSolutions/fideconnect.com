@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FideConnect: Centralized Management & Services</title>
+    <!-- Load Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* FONT CHANGE: Poppins added to better match the logo style */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f8fafc; /* Lighter background for the overall page */
+        }
+        /* Custom colors based on the logo */
+        :root {
+            --fidetech-dark-blue: #1A173A; /* From logo background */
+            --fidetech-orange-red: #E85B31; /* From logo bird accent */
+            --fidetech-light-blue: #5C6BC0; /* A secondary blue, like pico's placeholder */
+            --flockledger-indigo: #4f46e5; /* Original FlockLedger Indigo */
+            --flockledger-dark: #1f2937; /* Original FlockLedger Dark Gray */
+        }
+
+        /* Hero section with a dark blue gradient inspired by the logo's space theme */
+        .hero-bg {
+            background: linear-gradient(180deg, var(--fidetech-dark-blue) 0%, #302A5A 100%);
+        }
+
+        /* Custom Tailwind configuration */
+        .tailwind-config {
+            --tw-text-opacity: 1;
+            --tw-bg-opacity: 1;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'fide-dark-blue': 'var(--fidetech-dark-blue)',
+                        'fide-orange-red': 'var(--fidetech-orange-red)',
+                        'fide-light-blue': 'var(--fidetech-light-blue)',
+                        'indigo-600': 'var(--flockledger-indigo)',
+                        'gray-800': 'var(--flockledger-dark)',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navigation -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Branding: FideConnect Icon + Text -->
+<a href="#" class="flex items-center space-x-2">
+                    <!-- FideConnect SVG Icon (Hub/Link theme, using Fidetech colors) -->
+<svg class="h-8 w-8 text-fide-dark-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <!-- Main circle/hub in dark blue -->
+<circle cx="12" cy="12" r="10" stroke="currentColor" fill="none"/>
+                        <!-- Accent lines in orange-red -->
+<line x1="12" y1="2" x2="12" y2="6" stroke="var(--fidetech-orange-red)" stroke-width="3"/>
+                        <line x1="12" y1="18" x2="12" y2="22" stroke="var(--fidetech-orange-red)" stroke-width="3"/>
+                        <line x1="2" y1="12" x2="6" y2="12" stroke="var(--fidetech-orange-red)" stroke-width="3"/>
+                        <line x1="18" y1="12" x2="22" y2="12" stroke="var(--fidetech-orange-red)" stroke-width="3"/>
+                        <!-- Center dot for connectivity -->
+<circle cx="12" cy="12" r="3" fill="var(--fidetech-orange-red)"/>
+                    </svg>
+                    <!-- FideConnect text -->
+<span class="text-2xl font-extrabold text-fide-dark-blue tracking-tight leading-none">FIDE</span>
+                    <span class="text-xl font-bold text-gray-700 leading-none">Connect</span>
+                </a>
+
+                <!-- Actions -->
+<div class="flex items-center">
+                    <a href="https://app.flockledger.com"
+                       class="px-4 py-2 text-sm font-semibold text-white bg-fide-orange-red rounded-full shadow-lg hover:bg-fide-dark-blue transition duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-fide-orange-red focus:ring-offset-2">
+                        Log In
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+<section class="hero-bg py-20 sm:py-28 lg:py-32 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <p class="text-sm font-semibold text-fide-orange-red uppercase tracking-widest mb-3">
+                    Centralized Access and Billing
+                </p>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                    Your Hub for Management Solutions
+                </h1>
+                <p class="mt-4 text-xl text-gray-300 max-w-3xl mx-auto">
+                    FideConnect provides unified access, billing, and management for a suite of powerful software solutions designed for community and non-profit organizations.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Showcase Section -->
+<section id="services" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:text-center mb-12">
+                    <h2 class="text-base text-fide-orange-red font-semibold tracking-wide uppercase">Our Ecosystem of Solutions</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                        Explore Our Products
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                    <!-- Service Card 1: FlockLedger -->
+<a href="https://flockledger.com" target="_blank" class="block p-8 bg-gray-50 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 group border-t-4 border-fide-orange-red">
+                        <div class="flex items-center mb-6">
+                            <!-- FlockLedger Logo Recreation - using original brand colors -->
+<span class="text-4xl font-extrabold text-indigo-600 tracking-tight">F<span class="text-gray-800">L</span></span>
+                            <h3 class="ml-4 text-3xl font-bold text-gray-900 group-hover:text-fide-dark-blue transition duration-150">FlockLedger</h3>
+                        </div>
+                        <p class="text-lg text-gray-600 mb-6">
+                            FlockLedger is the ultimate community management system for member tracking, finance, and event attendance. It streamlines administrative tasks so you can focus on your core mission.
+                        </p>
+                        <div class="inline-flex items-center text-fide-dark-blue font-semibold group-hover:text-fide-orange-red group-hover:underline">
+                            Visit FlockLedger Site
+                            <!-- Arrow right icon -->
+<svg class="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </div>
+                    </a>
+
+                    <!-- Service Card 2: PicoPresent -->
+<a href="https://picopresent.com" target="_blank" class="block p-8 bg-gray-50 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 group border-t-4 border-fide-orange-red">
+                        <div class="flex items-center mb-6">
+                            <!-- PicoPresent Logo Image -->
+<img src="https://picopresent.com/logo.png" onerror="this.onerror=null; this.src='https://placehold.co/64x64/5C6BC0/ffffff?text=PICO';" alt="PicoPresent Logo" class="h-10 w-auto rounded-md mr-4">
+                            <h3 class="text-3xl font-bold text-gray-900 group-hover:text-fide-dark-blue transition duration-150">PicoPresent</h3>
+                        </div>
+                        <p class="text-lg text-gray-600 mb-6">
+                            PicoPresent is a low-power, portable solution for displaying song lyrics, scriptures, and other content during church services. Control everything effortlessly from your phone or tablet.
+                        </p>
+                        <div class="inline-flex items-center text-fide-dark-blue font-semibold group-hover:text-fide-orange-red group-hover:underline">
+                            Visit PicoPresent Site
+                            <!-- Arrow right icon -->
+<svg class="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Coming Soon Placeholder -->
+<div class="mt-16 text-center text-gray-500">
+                    <p class="text-xl font-medium">More powerful tools are coming soon!</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+<footer class="bg-fide-dark-blue py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-gray-400">
+                <!-- Column 1: Logo/Brand -->
+<div>
+                    <a href="#" class="flex items-center space-x-2 mb-4">
+                        <!-- FideConnect SVG Icon (Hub/Link theme, using Fidetech colors) for Footer -->
+<svg class="h-8 w-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Main circle/hub in white -->
+<circle cx="12" cy="12" r="10" stroke="currentColor" fill="none"/>
+                            <!-- Accent lines in orange-red -->
+<line x1="12" y1="2" x2="12" y2="6" stroke="var(--fidetech-orange-red)" stroke-width="3"/>
+                            <line x1="12" y1="18" x2="12" y2="22" stroke="var(--fidetech-orange-red)" stroke-width="3"/>
+                            <line x1="2" y1="12" x2="6" y2="12" stroke="var(--fidetech-orange-red)" stroke-width="3"/>
+                            <line x1="18" y1="12" x2="22" y2="12" stroke="var(--fidetech-orange-red)" stroke-width="3"/>
+                            <!-- Center dot for connectivity -->
+<circle cx="12" cy="12" r="3" fill="var(--fidetech-orange-red)"/>
+                        </svg>
+                        <!-- FideConnect text for Footer -->
+<span class="text-2xl font-extrabold text-fide-orange-red tracking-tight leading-none">FIDE</span>
+                        <span class="text-xl font-bold text-white leading-none">Connect</span>
+                    </a>
+                    <p>The centralized management hub for your organizational software solutions.</p>
+                </div>
+
+                <!-- Column 2: Access Links -->
+<div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Quick Access</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://app.fideconnect.com" class="hover:text-fide-orange-red transition duration-150">Log In to Portal</a></li>
+                        <li><a href="https://flockledger.com" class="hover:text-fide-orange-red transition duration-150">FlockLedger</a></li>
+                        <li><a href="https://picopresent.com" class="hover:text-fide-orange-red transition duration-150">PicoPresent</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Legal -->
+<div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-fide-orange-red transition duration-150">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-fide-orange-red transition duration-150">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+<div class="mt-12 pt-8 border-t border-gray-700 text-center">
+                <p class="text-gray-500 text-sm">&copy; 2025 Fidetech Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
